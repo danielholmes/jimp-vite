@@ -30,7 +30,7 @@ jobs:
         uses: bahmutov/npm-install@v1
       
       - name: Build
-        run: npm run build
+        run: npm run build:ghpages
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
