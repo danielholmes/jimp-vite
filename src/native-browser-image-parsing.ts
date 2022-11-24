@@ -1,5 +1,6 @@
-import Jimp from "jimp";
 import { Image, loadImage, createCanvas } from "canvas";
+import { Jimp } from "@jimp/core"
+import CustomJimp from "./custom-jimp";
 
 function createCanvasContext2d(
     width: number,
@@ -26,7 +27,7 @@ async function drawImageToMaxSizedImageData(
 }
 
 async function imageDataToJimp(imageData: ImageData): Promise<Jimp> {
-  const jimp = await Jimp.create(imageData.width, imageData.height);
+  const jimp = await CustomJimp.create(imageData.width, imageData.height);
   for (let x = 0; x < imageData.width; x++) {
     for (let y = 0; y < imageData.height; y++) {
       const baseI = (x + y * imageData.width) * 4;

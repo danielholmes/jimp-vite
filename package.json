@@ -4,17 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
+    "postinstall": "patch-package",
+    "dev": "vite",
     "build": "tsc && vite build",
     "build:ghpages": "tsc && vite build --base=/jimp-vite/",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@jimp/core": "^0.16.2",
+    "@jimp/custom": "^0.16.2",
+    "@jimp/jpeg": "^0.16.2",
     "buffer": "^6.0.3",
     "canvas": "^2.10.2",
-    "jimp": "^0.16.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "timm": "^1.7.1"
   },
   "devDependencies": {
     "@rollup/plugin-inject": "^5.0.2",
@@ -22,6 +26,7 @@
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",
     "node-stdlib-browser": "^1.2.0",
+    "patch-package": "^6.5.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3",
     "vite-plugin-node-stdlib-browser": "^0.1.1"

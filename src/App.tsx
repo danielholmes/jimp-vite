@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from 'react'
-import Jimp from 'jimp';
-import { parseUploadedFileToJimp } from './nativeBrowserImageParsing';
+import { Jimp } from '@jimp/core';
+import { parseUploadedFileToJimp } from './native-browser-image-parsing';
 
 function App() {
   const [image, setImage] = useState<Jimp | undefined>();
@@ -17,11 +17,11 @@ function App() {
 
   return (
     <div>
-      <h2>Upload a file to parse with JIMP</h2>
+      <h2>Upload a file to parse with JIMP (JPEG only)</h2>
       <input
         type="file"
         name="image"
-        accept="image/*"
+        accept="image/jpeg"
         onChange={onFileChange}
       />
       {image ? <div>Got jimp parsed image {image.bitmap.width}x{image.bitmap.height}</div> : <div>No image</div>}
