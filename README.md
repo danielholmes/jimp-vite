@@ -20,6 +20,12 @@ Install dependencies:
 npm ci
 ```
 
+Apply jimp patches:
+
+```bash
+npm run apply-patches
+```
+
 ## Running locally
 
 ```bash
