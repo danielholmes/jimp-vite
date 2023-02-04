@@ -12,7 +12,7 @@ Install required system dependencies using [ASDF](https://asdf-vm.com/):
 asdf install
 ```
 
-or manually install them, see `./tool-versions`.
+or manually install them, see `./.tool-versions`.
 
 Install dependencies:
 
