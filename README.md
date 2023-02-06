@@ -23,7 +23,7 @@ npm ci
 Apply jimp patches:
 
 ```bash
-npm run apply-patches
+npx patch-package
 ```
 
 ## Running locally

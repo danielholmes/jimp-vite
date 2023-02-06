@@ -30,7 +30,7 @@ jobs:
         uses: bahmutov/npm-install@v1
       
       - name: Apply JIMP patches
-        run: npm run apply-patches
+        run: npx patch-package
       
       - name: Build
         run: npm run build:ghpages

@@ -1,4 +1,4 @@
-import { Image, loadImage, createCanvas } from "canvas";
+import { Image, loadImage, ImageData, createCanvas, CanvasRenderingContext2D } from "canvas";
 import { Jimp } from "@jimp/core"
 import CustomJimp from "./custom-jimp";
 
